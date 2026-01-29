@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <motion.nav 
+      <motion.nav
         className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -36,13 +36,18 @@ const Navbar: React.FC = () => {
           relative flex items-center justify-between transition-all duration-500 ease-out
           ${scrolled ? 'w-full max-w-5xl bg-slate-950/80 backdrop-blur-xl border border-white/10 shadow-2xl rounded-full py-3 px-6' : 'w-full max-w-7xl bg-transparent py-4 px-4'}
         `}>
-          
+
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 group relative z-50">
-            <img src="/logo.png" alt="Power Global Logo" className="h-12 w-auto object-contain" />
-            <span className="font-display font-bold text-xl tracking-tighter text-white">
-              POWER<span className="text-accent-500">GLOBAL</span>
-            </span>
+          <a href="#home" className="flex items-center gap-3 group relative z-50">
+            <img src="/logo.png" alt="Power Global Dynamics" className="h-10 w-auto object-contain" />
+            <div className="flex flex-col leading-none">
+              <span className="font-display font-bold text-xl tracking-tighter text-white">
+                POWER<span className="text-accent-500">GLOBAL</span>
+              </span>
+              <span className="font-display font-bold text-[0.6rem] tracking-[0.2em] text-slate-400 uppercase">
+                Dynamics
+              </span>
+            </div>
           </a>
 
           {/* Desktop Menu */}
@@ -88,7 +93,7 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -106,10 +111,10 @@ const Navbar: React.FC = () => {
                 </a>
               ))}
               <a
-                  href={`https://wa.me/${primaryNumber}`}
-                  className="mt-8 text-accent-500 font-bold text-xl border-b border-accent-500 pb-1"
-                >
-                  Start a Project
+                href={`https://wa.me/${primaryNumber}`}
+                className="mt-8 text-accent-500 font-bold text-xl border-b border-accent-500 pb-1"
+              >
+                Start a Project
               </a>
             </div>
           </motion.div>

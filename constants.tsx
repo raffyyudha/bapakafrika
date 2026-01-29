@@ -8,7 +8,7 @@ export const CONTACT_DETAILS: ContactInfo = {
   address: "187 Roux Street, Danville, Pretoria, Gauteng",
   location: "Danville, Pretoria & Greater Gauteng",
   phone: "083 789 4208 / 068 372 5544",
-  email: "info@powerglobaldynamics.co.za"
+  email: "marvinkudakwashe484@gmail.com"
 };
 
 export const WHATSAPP_NUMBERS = [
